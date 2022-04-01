@@ -1,0 +1,30 @@
+/* ==== COLORS ===== */
+$bisnow-orange: #F58320;
+$bisnow-navy: #103562;
+$bisnow-black: #333;
+$bisnow-gray-extralight: #F8F9FA;
+$bisnow-gray-light: #e6e6e6;
+$bisnow-gray-dark: #666;
+$bisnow-disabled: #cccccc;
+$bisnow-red: #CC252C;
+$bisnow-red-deep: #B20016;
+$bisnow-error: #e06464;
+$bisnow-charcoal: #242424;
+
+$white: #fff;
+$black: #000;
+
+/* ==== FONTS ==== */
+$alternate-gothic: 'alternate_gothic_3', Arial, Helvetica, sans-serif;
+$news-gothic: 'news_gothic_book_bold', Arial, Helvetica, sans-serif;
+$trade-gothic: 'trade_gothic_regular', Arial, Helvetica, sans-serif;
+$crimson-text: 'Crimson Text', serif;
+$georgia: Georgia, Times, serif;
+
+/* ==== BREAKPOINTS ==== */
+//I am seeing some breakpoints set at 450 and some at 479, so including both for now to be safe
+$breakpoint-xs: 450px;
+$breakpoint-sm: 479px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1300px;

@@ -1,0 +1,60 @@
+//LAYOUT
+$gutter: 60px;
+
+@mixin wrapper {
+    // will do some more official calculations later
+    min-height: calc(100vh - 200px);
+    padding: 30px 50px;
+    background: $bisnow-gray-extralight;
+}
+
+//grid, will make this more accurate later 
+
+@mixin col-third {
+    width: calc(33% - 30px);
+}
+
+@mixin col-two-thirds {
+    width: calc(66% - 30px);
+}
+
+//BUTTONS
+
+@mixin button-primary {
+    background: $bisnow-orange;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+//LISTS 
+
+@mixin unordered-list {
+    list-style: none;
+    padding-left: 0;
+
+}
+
+//TYPOGRAPHY
+
+@mixin h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+    color: $bisnow-gray-dark;
+    font-size: 22px;
+}
+
+@mixin h4 {
+    font-weight: bold;
+    font-family: Arial;
+    color: $bisnow-charcoal;
+    font-size: 18px;
+}
+
+
+//TODO: Find somewhere to put this
+body {
+    margin: 0;
+}
