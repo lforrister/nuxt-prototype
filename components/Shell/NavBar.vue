@@ -29,20 +29,29 @@
         </ul>
         <div class="navBar__login-items">
             <!-- Search Icon Component -->
-            <SignUp class="navBar__login-item" />
-            <!-- LOG IN Component --> 
-            Log In 
+            <SignUp v-if="!loggedIn" class="navBar__login-item" />
+            <LogIn class="navBar__login-ink">
+                Log In 
+            </LogIn>
         </div>
     </nav>
 </template>
 
 <script>
+import LogIn from './Navigation/LogIn.vue'
 import SignUp from './Navigation/SignUp.vue'
 
 export default {
     components: {
+        LogIn,
         SignUp,
-    }
+    },
+
+    computed: {
+        loggedIn() {
+            return this.$store.state.login.loggedIn
+        }
+    },
 }
 </script>
 

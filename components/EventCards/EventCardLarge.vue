@@ -4,10 +4,13 @@
             {{ fact }}
         </div>
 
-        <div class="eventCardLarge__image-wrapper">
-            <img class="eventCardLarge__image" :src="image" />
-            <!-- TODO: Do we want to lazy load? skeleton load? etc -->
-        </div>
+        <figure class="eventCardLarge__image-wrapper">
+            <img 
+                class="eventCardLarge__image lazyload" 
+                src="https://via.placeholder.com/850x400.png" 
+                :data-src="image" 
+                alt="alt text"/>
+        </figure>
 
     </div>
 </template>
@@ -58,6 +61,7 @@ export default {
         padding-bottom: 50%;
         position: relative;
         overflow: hidden;
+        margin: 0;
     }
 
     .eventCardLarge__image {

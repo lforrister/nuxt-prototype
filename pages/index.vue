@@ -2,7 +2,7 @@
   <div class="homePage__container">
     <featured-event
       :facts="facts"
-      :image="image.url"
+      :image="image.message"
     />
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 
   async asyncData({$axios}) {
     const facts = await $axios.$get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=3')
-    const image  = await $axios.$get('https://random.dog/woof.json')
+    const image  = await $axios.$get('https://dog.ceo/api/breeds/image/random')
     return { facts, image }
   }
 
