@@ -1,23 +1,24 @@
 <template>
     <div class="eventCardLarge__card">
         <div class="eventCardLarge__header">
-            {{ fact.fact }}
+            {{ fact[0].fact }}
         </div>
             <!-- {{ $fetchState.pending }} -->
-           <figure class="eventCardLarge__image-wrapper">
-            <img 
-                class="eventCardLarge__image lazyload" 
-                src="https://via.placeholder.com/850x400.png" 
-                :data-src="image.message" 
-                alt="alt text"/>
-        </figure>
-
+        <LazyImage
+            :data="image.message"
+            class="eventCardLarge__image"
+        />
     </div>
 </template>
 
 <script>
+import LazyImage from '../LazyImage.vue'
 
 export default {
+    components: {
+        LazyImage
+    },
+
     data: () => ({
         fact: [],
         image: [],
@@ -29,12 +30,9 @@ export default {
     },
 
     // fetchOnServer: false,
-    
-
-
 
 }
-</script>s
+</script>
 
 <style lang="scss">
     .eventCardLarge__card {
@@ -48,20 +46,5 @@ export default {
         font-size: 30px;
     }
 
-    .eventCardLarge__image-wrapper {
-        width: 100%;
-        height: 0;
-        padding-bottom: 50%;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-    }
-
-    .eventCardLarge__image {
-        width: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 
 </style>

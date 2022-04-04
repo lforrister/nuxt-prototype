@@ -18,6 +18,14 @@ $gutter: 60px;
     width: calc(66% - 30px);
 }
 
+@mixin col-quarter {
+    width: calc(25% - 30px);
+}
+
+@mixin col-three-quarters {
+    width: calc(75% - 30px);
+}
+
 //BUTTONS
 
 @mixin button-primary {
