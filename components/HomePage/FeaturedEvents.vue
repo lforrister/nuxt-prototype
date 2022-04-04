@@ -1,10 +1,7 @@
 <template>
     <section class="featuredEvents__section">
         <div class="featuredEvents__left">
-            <EventCardLarge 
-                :image="image"
-                :fact="facts[0].fact"
-            />
+            <EventCardLarge />
         </div>
         <div class="featuredEvents__right">
             <h3 class="featuredEvents__trending">

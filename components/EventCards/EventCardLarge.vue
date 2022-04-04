@@ -1,14 +1,14 @@
 <template>
     <div class="eventCardLarge__card">
         <div class="eventCardLarge__header">
-            {{ fact }}
+            {{ fact.fact }}
         </div>
-
-        <figure class="eventCardLarge__image-wrapper">
+            <!-- {{ $fetchState.pending }} -->
+           <figure class="eventCardLarge__image-wrapper">
             <img 
                 class="eventCardLarge__image lazyload" 
                 src="https://via.placeholder.com/850x400.png" 
-                :data-src="image" 
+                :data-src="image.message" 
                 alt="alt text"/>
         </figure>
 
@@ -18,30 +18,23 @@
 <script>
 
 export default {
-    props: {
-        image: {
-            type: String,
-            default: '',
-        },
-        fact: {
-            type: String,
-            default: '',
-        }
-
-  },
     data: () => ({
-        // fact: [],
-        // image: [],
+        fact: [],
+        image: [],
     }),
 
-  async fetch() {
-    // this.image = await this.$axios.$get('https://random.dog/woof.json')
-    // this.fact = await this.$axios.$get('https://catfact.ninja/fact')
-  },
+    async fetch() {
+        this.image = await this.$axios.$get('https://dog.ceo/api/breeds/image/random')
+        this.fact = await this.$axios.$get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+    },
+
+    // fetchOnServer: false,
+    
+
 
 
 }
-</script>
+</script>s
 
 <style lang="scss">
     .eventCardLarge__card {
